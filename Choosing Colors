@@ -1,5 +1,6 @@
-**I created this when I first began coding, so I list different options for selecting colors. My go-to color choices are from RColorBrewer mainly because they have color-blind friendly palettes.**
-```
+I created this when I first began coding, so I list different options for selecting colors. 
+My go-to color choices are from RColorBrewer mainly because they have color-blind friendly palettes.
+
 # Choosing Colors --------------------------------------------------------------
 
 # Create an object for trying out different colors
@@ -51,4 +52,3 @@ barplot(x, col = brewer.pal(6, "Greens"))
 
 # If you need to clean your workspace:
 rm(list = ls())
-```
