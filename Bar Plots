@@ -5,6 +5,8 @@ be used as a starting point where you can modify and reduce as needed.
 Some examples I learned in Base R, and I converted them to ggplot2, which I prefer. 
 I organize each plot example like so: Base R>ggplot2 annotated>not annotated.
 
+# Load Necessary Packages/Files ------------------------------------------------
+
 # Load datasets
 ?datasets # "?" before any code for its description
 library(help = "datasets") # Brings up documentation into editor window
@@ -236,3 +238,11 @@ fert
 
 # Save your graph
 ggsave(fert, filename = paste("graph_histo_fertility.png"), path = "Pictures")
+
+#### Final Products ####
+chick # Bar Graph
+fert # Stacked Histogram
+
+# Clean Up
+rm(list = ls())
+detach("package:tidyverse", unload = TRUE)
