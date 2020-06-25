@@ -136,7 +136,9 @@ rain_basic <-
   labs(caption = "plot by @MilesToKilo")
 rain_basic
 # Save your graph
-ggsave(rain_basic, filename = paste("graph_rain_collegeBasic.png"), path = "Pictures")
+ggsave(rain_basic, filename = paste("graph_rain_collegeBasic.png"), 
+       path = "Pictures") # Destination
+# Ideally, you have a folder within your directory for saving these graphs 
 
 ## In many situations you may have nested, factorial, or repeated 
 ## measures data. In this case, one option is to use plot facets to group by 
@@ -159,7 +161,9 @@ ggplot(college, aes(x = control, y = sat_avg,
 rain_complex
 
 # Save your graph
-ggsave(rain_complex, filename = paste("graph_rain_collegeComplex.png"), path = "Pictures")
+ggsave(rain_complex, filename = paste("graph_rain_collegeComplex.png"), 
+       path = "Pictures") # Destination
+# Ideally, you have a folder within your directory for saving these graphs 
 
 #### Final Products ####
 rain_basic # Basic Raincloud Plot
