@@ -33,7 +33,7 @@ beav1.mm
 beav <-
 ggplot(data = beav1.1) +
   ggtitle("Long-Term Temperature Dynamics of Beavers", subtitle = "beavers dataset provided by R") +
-  geom_line(aes(x = beav1.1$time, y = beav1.1$temp),
+  geom_line(aes(x = time, y = temp),
             color = "red", lwd = 2, alpha = 0.5) +
   theme(
     plot.title = element_text(size = 17, face = "bold", color = "black"),
@@ -59,7 +59,7 @@ beav
 
 # Save your graph
 ggsave(beav, filename = paste("graph_line_beaver.png"), 
-       path = "Pictures") # Destination
+       path = "Pictures", height = 20, width = 20, units = "cm")
 # Ideally, you have a folder within your directory for saving these graphs 
 
 #### Final Product ####
