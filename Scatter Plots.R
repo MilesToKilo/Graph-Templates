@@ -85,8 +85,8 @@ ggplot( # Graph space for all you are about to add
 flower
 
 # Save your graph
-ggsave(flower, filename = paste("graph_scatter_flower.png"), 
-       path = "Pictures") # Destination
+ggsave(flower, filename = paste("graph_scatter_flower.png"), path = "Pictures", 
+       height = 20, width = 20, units = "cm")
 # Ideally, you have a folder within your directory for saving these graphs 
 
 #### College Example ####
@@ -138,7 +138,7 @@ school
 
 # Save your graph
 ggsave(school, filename = paste("graph_scatter_school.png"), 
-       path = "Pictures") # Destination
+       path = "Pictures", height = 20, width = 20, units = "cm")
 # Ideally, you have a folder within your directory for saving these graphs 
 
 #### Final Products ####
