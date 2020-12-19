@@ -39,11 +39,11 @@ limits.2 # View the limits
 
 ## Vertical Violin Plot ##
 sl.v <- # Save graph into object
-ggplot(data = sleep, aes(x = sleep$group)) +
+ggplot(data = sleep, aes(x = group)) +
   ggtitle("Effect of Two Soporific Drugs on Student Sleep", subtitle = "sleep dataset provided by R") +
-  geom_violin(mapping = aes(y = sleep$extra, fill = sleep$group),
+  geom_violin(mapping = aes(y = extra, fill = group),
               size = 1, color = "black", alpha = 0.6) +
-  geom_boxplot(mapping = aes(y = sleep$extra, fill = sleep$group),
+  geom_boxplot(mapping = aes(y = extra, fill = group),
                width = 0.1, size = 1, color = "black"
                # ,outlier.size = 3, outlier.color = "black", outlier.alpha = 1 
                ) +
@@ -75,16 +75,16 @@ sl.v
 
 # Save your graph
 ggsave(sl.v, filename = paste("graph_violin_sleepVertical.png"), 
-       path = "Pictures") # Destination
+       path = "Pictures", height = 20, width = 20, units = "cm")
 # Ideally, you have a folder within your directory for saving these graphs 
 
 ## Horizontal Violin Plot ##
 sl.h <- # Save graph into object
-ggplot(data = sleep, aes(x = sleep$group)) +
+ggplot(data = sleep, aes(x = group)) +
   ggtitle("Effect of Two Soporific Drugs on Student Sleep", subtitle = "sleep dataset provided by R") +
-  geom_violin(mapping = aes(y = sleep$extra, fill = sleep$group),
+  geom_violin(mapping = aes(y = extra, fill = group),
               size = 1, color = "black", alpha = 0.6) +
-  geom_boxplot(mapping = aes(y = sleep$extra, fill = sleep$group),
+  geom_boxplot(mapping = aes(y = extra, fill = group),
                width = 0.1, size = 1, color = "black"
                # ,outlier.size = 3, outlier.color = "black", outlier.alpha = 1 
   ) +
@@ -117,7 +117,7 @@ sl.h
 
 # Save your graph
 ggsave(sl.h, filename = paste("graph_violin_sleepHorizontal.png"), 
-       path = "Pictures") # Destination
+       path = "Pictures", height = 20, width = 20, units = "cm")
 # Ideally, you have a folder within your directory for saving these graphs 
 
 #### Final Products ####
