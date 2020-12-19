@@ -137,7 +137,7 @@ rain_basic <-
 rain_basic
 # Save your graph
 ggsave(rain_basic, filename = paste("graph_rain_collegeBasic.png"), 
-       path = "Pictures") # Destination
+       path = "Pictures", height = 20, width = 20, units = "cm")
 # Ideally, you have a folder within your directory for saving these graphs 
 
 ## In many situations you may have nested, factorial, or repeated 
@@ -162,7 +162,7 @@ rain_complex
 
 # Save your graph
 ggsave(rain_complex, filename = paste("graph_rain_collegeComplex.png"), 
-       path = "Pictures") # Destination
+       path = "Pictures", height = 20, width = 20, units = "cm")
 # Ideally, you have a folder within your directory for saving these graphs 
 
 #### Final Products ####
