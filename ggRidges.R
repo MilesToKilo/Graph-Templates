@@ -87,7 +87,7 @@ gridge
 
 # Save your graph
 ggsave(gridge, filename = paste("graph_ggridges_college.png"), 
-       path = "Pictures") # Destination
+       path = "Pictures", height = 20, width = 20, units = "cm")
 # Ideally, you have a folder within your directory for saving these graphs 
 
 ## ggRidges with gradient
@@ -124,8 +124,8 @@ ggplot(college,
 gridge_grad
 
 # Save your graph
-ggsave(gridge, filename = paste("graph_ggridges_collegeGradient.png"), 
-       path = "Pictures") # Destination
+ggsave(gridge_grad, filename = paste("graph_ggridges_collegeGradient.png"), 
+       path = "Pictures", height = 20, width = 20, units = "cm")
 # Ideally, you have a folder within your directory for saving these graphs 
 
 #### Final Products ####
