@@ -53,9 +53,9 @@ ggplot( # Graph space for all that you are about to add
           subtitle = "chickwts dataset provided by R ") + # Graph subtitle
   geom_bar( # Bar graph
     color = "black", # Bar outline color
-    mapping = aes(x = chickwts$feed, # Bar graph data
-                         fill = chickwts$feed # Fill bar colors according to variable
-                         # sort.list(chickwts$feed, decreasing = TRUE)
+    mapping = aes(x = feed, # Bar graph data
+                         fill = feed # Fill bar colors according to variable
+                         # sort.list(feed, decreasing = TRUE)
                          )) + #
   # grid.major.y for Y-axis, and grid.major.x for X-axis
     theme(panel.background = element_rect(color = "black", fill = "white"), # Graph panel background
@@ -97,7 +97,7 @@ ggplot(data = chickwts) +
   ggtitle("Chicken Feed Influence on Offspring Production", 
           subtitle = "chickwts dataset provided by R ") + 
   geom_bar(color = "black",
-    mapping = aes(x = chickwts$feed, fill = chickwts$feed)) +
+    mapping = aes(x = feed, fill = feed)) +
   theme(panel.background = element_blank(), plot.background = element_blank(),
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         axis.title = element_text(size = 13, color = "black", face = "bold"),
@@ -118,7 +118,8 @@ chick
 
 # Save your graph
 ggsave(chick, filename = paste("graph_bar_chick.png"), 
-       path = "Pictures") # Destination
+       path = "Pictures",  # Destination
+       height = 20, width = 20, units = "cm") 
 # Ideally, you have a folder within your directory for saving these graphs 
 
 # Histograms -------------------------------------------------------------------
@@ -237,7 +238,8 @@ ggplot(data = swiss, aes(x = fertility)) +
 fert
 
 # Save your graph
-ggsave(fert, filename = paste("graph_histo_fertility.png"), path = "Pictures")
+ggsave(fert, filename = paste("graph_histo_fertility.png"), path = "Pictures", 
+       height = 20, width = 20, units = "cm")
 
 #### Final Products ####
 chick # Bar Graph
